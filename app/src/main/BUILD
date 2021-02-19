@@ -26,11 +26,14 @@ kt_android_library(
     deps = [
         ":bazel_res",
         artifact("androidx.appcompat:appcompat"),
-        artifact("androidx.fragment:fragment"),
+        artifact("androidx.fragment:fragment-ktx"),
+        artifact("androidx.activity:activity-ktx"),
         artifact("androidx.core:core"),
         artifact("androidx.lifecycle:lifecycle-runtime"),
         artifact("androidx.lifecycle:lifecycle-viewmodel"),
+        artifact("androidx.lifecycle:lifecycle-runtime-ktx"),
         artifact("androidx.lifecycle:lifecycle-common"),
+        artifact("androidx.savedstate:savedstate-ktx"),
         artifact("androidx.drawerlayout:drawerlayout"),
         artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core"),
         artifact("org.jetbrains.kotlinx:kotlinx-coroutines-android"),
@@ -43,9 +46,9 @@ android_binary(
     custom_package = PACKAGE,
     manifest_values = {
         "minSdkVersion": "21",
+        "targetSdkVersion": "30",
         "versionCode" : "2",
         "versionName" : "0.2",
-        "targetSdkVersion": "29",
     },
     deps = [
         ":bazel_res",
