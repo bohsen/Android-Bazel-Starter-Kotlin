@@ -13,12 +13,12 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tv_label).text = "Hello Bazel, from Kotlin!"
 
-        `kotlin_13_test`("test")
+        kotlin13Test("test")
 
         launchCoroutine()
     }
 
-    private fun kotlin_13_test(x: String?) {
+    private fun kotlin13Test(x: String?) {
         if (!x.isNullOrEmpty()) {
             println("length of '$x' is ${x.length}") // Yay, smartcasted to not-null!
         }
